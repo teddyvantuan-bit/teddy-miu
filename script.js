@@ -93,7 +93,7 @@ musicButton.addEventListener('click', async () => {
   }
   try {
     await music.play();
-  } catch (_) {
-    showToast(weddingI18n.t('musicUnavailable'));
+  } catch (error) {
+    if (error.name !== 'AbortError') showToast(weddingI18n.t('musicUnavailable'));
   }
 });
