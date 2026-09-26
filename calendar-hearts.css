@@ -1,0 +1,22 @@
+.calendar .bride-day,
+.calendar .groom-day {
+  position: relative;
+  isolation: isolate;
+  border-radius: 0;
+  background: none;
+  color: #fff;
+  text-shadow: 0 1px 2px #0002;
+  padding-bottom: .12em;
+}
+.calendar .bride-day { --heart-color: var(--green); }
+.calendar .groom-day { --heart-color: var(--red); }
+.calendar .bride-day::before,
+.calendar .groom-day::before {
+  content: '';
+  position: absolute;
+  inset: -5%;
+  z-index: -1;
+  background: var(--heart-color);
+  -webkit-mask: url('assets/calendar-heart.svg') center / contain no-repeat;
+  mask: url('assets/calendar-heart.svg') center / contain no-repeat;
+}

@@ -74,18 +74,25 @@ document.getElementById('heart-button').addEventListener('click', event => {
 
 const music = document.getElementById('background-music');
 const musicButton = document.getElementById('music-button');
-musicButton.setAttribute('aria-pressed', 'false');
+music.volume = 0.55;
+function updateMusicButton() {
+  const playing = !music.paused;
+  musicButton.setAttribute('aria-pressed', String(playing));
+  musicButton.setAttribute('aria-label', weddingI18n.t(playing ? 'pauseMusic' : 'music'));
+  musicButton.title = weddingI18n.t(playing ? 'pauseMusic' : 'musicTitle');
+  musicButton.textContent = playing ? '❚❚' : '♫';
+}
+window.updateMusicButton = updateMusicButton;
+music.addEventListener('play', updateMusicButton);
+music.addEventListener('pause', updateMusicButton);
+updateMusicButton();
 musicButton.addEventListener('click', async () => {
   if (!music.paused) {
     music.pause();
-    musicButton.setAttribute('aria-pressed', 'false');
-    musicButton.textContent = '♫';
     return;
   }
   try {
     await music.play();
-    musicButton.setAttribute('aria-pressed', 'true');
-    musicButton.textContent = '❚❚';
   } catch (_) {
     showToast(weddingI18n.t('musicUnavailable'));
   }

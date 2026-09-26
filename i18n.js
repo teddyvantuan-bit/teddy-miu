@@ -45,10 +45,10 @@ const translations = {
     attendingYes: 'Có, tôi sẽ tham dự', attendingNo: 'Tôi bận, rất tiếc không thể tham dự',
     whichEvent: 'Bạn tham dự ngày nào?', chooseDate: 'Chọn ngày',
     brideOption: 'Nhà Gái · 18/10', groomOption: 'Nhà Trai · 25/10', bothOption: 'Cả hai ngày',
-    sendRsvp: 'Gửi xác nhận', interactions: 'Tương tác với thiệp', music: 'Bật nhạc',
+    sendRsvp: 'Gửi xác nhận', interactions: 'Tương tác với thiệp', music: 'Bật nhạc', pauseMusic: 'Tạm dừng nhạc',
     musicTitle: 'Nhạc nền', messageTitle: 'Gửi lời chúc', messageButton: 'Gửi lời chúc…', heart: 'Bắn tim',
     rsvpUnavailable: 'Biểu mẫu chưa được kết nối để lưu xác nhận. Vui lòng thử lại sau.',
-    musicUnavailable: 'Chưa có file nhạc nền. Bạn có thể gửi bài nhạc muốn dùng.',
+    musicUnavailable: 'Không phát được nhạc. Vui lòng thử lại.',
     countdownDone: 'Đã đến ngày vui!', day: 'ngày', hour: 'giờ', minute: 'phút', second: 'giây',
     weekdays: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
     calendarDate: date => `${date} tháng 10`, calendarWeddingDate: date => `${date} tháng 10, ngày cưới`,
@@ -101,10 +101,10 @@ const translations = {
     attendingYes: 'Yes, I will attend', attendingNo: 'Sorry, I cannot attend',
     whichEvent: 'Which celebration will you attend?', chooseDate: 'Choose a date',
     brideOption: "Bride's family · Oct 18", groomOption: "Groom's family · Oct 25", bothOption: 'Both days',
-    sendRsvp: 'Send RSVP', interactions: 'Invitation interactions', music: 'Play music',
+    sendRsvp: 'Send RSVP', interactions: 'Invitation interactions', music: 'Play music', pauseMusic: 'Pause music',
     musicTitle: 'Background music', messageTitle: 'Send a wish', messageButton: 'Send a wish…', heart: 'Send hearts',
     rsvpUnavailable: 'The RSVP form is not connected yet. Please try again later.',
-    musicUnavailable: 'Background music has not been added yet.',
+    musicUnavailable: 'Music could not be played. Please try again.',
     countdownDone: 'The celebration is here!', day: 'days', hour: 'hours', minute: 'minutes', second: 'seconds',
     weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     calendarDate: date => `October ${date}`, calendarWeddingDate: date => `October ${date}, wedding day`,
@@ -141,6 +141,7 @@ function applyLanguage(language, updateUrl = false) {
   if (status.dataset.messageKey) status.textContent = translate(status.dataset.messageKey);
   window.refreshCalendar?.();
   window.updateCountdowns?.();
+  window.updateMusicButton?.();
   try { localStorage.setItem('wedding-language', language); } catch (_) {}
   if (updateUrl) {
     const url = new URL(location.href);

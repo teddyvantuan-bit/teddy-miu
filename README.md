@@ -18,7 +18,7 @@ Bản VI giữ các tiêu đề và dòng trang trí tiếng Anh như mẫu tham
 1. Hai ảnh ghép `BIAaa.jpg` và `0 (9).jpg` trong repo đã được dùng ở nhiều vị trí. Các vùng ảnh được chọn trong `photos.css`. Nếu có ảnh cưới riêng, thay nguồn ảnh tại đó để trang đẹp và tải nhanh hơn.
 2. Cung cấp địa chỉ chính xác/Google Maps pin của từng địa điểm. Link hiện tại chỉ tìm theo tên, chưa xác thực đúng cổng vào.
 3. Tạo Google Form theo [GOOGLE_FORM.md](GOOGLE_FORM.md), rồi gửi link trả lời để kết nối. Phần xác nhận hiện thông báo “sắp mở”; biểu mẫu được ẩn để không nhận dữ liệu vào nơi chưa kết nối.
-4. Nếu có file MP3 của “All of Me” hoặc “Sugar” mà bạn được phép đăng công khai, đặt tại `assets/music.mp3` và bỏ thuộc tính `hidden` trên `#music-button` trong `index.html`. Nhạc chỉ phát sau khi khách bấm nút do quy định của trình duyệt.
+4. Đoạn nhạc nền 105 giây nằm tại `assets/music.mp3`, đã được cắt từ file người dùng cung cấp, với fade in/out. Khách bấm nút ♫ để phát hoặc tạm dừng; trình duyệt không cho trang tự phát nhạc khi mở.
 
 Website: `https://teddyvantuan-bit.github.io/teddy-miu/`.
 
