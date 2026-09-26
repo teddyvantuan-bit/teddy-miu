@@ -1,0 +1,157 @@
+const translations = {
+  vi: {
+    pageTitle: 'Mỹ Dung & Tuấn | Thiệp cưới',
+    description: 'Thiệp cưới của Huỳnh Thị Mỹ Dung và Nguyễn Văn Tuấn.',
+    welcome: 'Welcome to our wedding',
+    heroQuote: 'I love three things in this world:<br />the sun, the moon and you.<br />The sun for morning, the moon for night,<br />and you forever.',
+    married: 'We got married', bride: 'BRIDE', groom: 'GROOM',
+    wedding: 'WEDDING', invitation: 'INVITATION',
+    introThanks: 'To our family and friends, thank you for celebrating our special day, supporting us and sharing our love.',
+    introTagline: 'Right love | Right reason | Right for you',
+    loveStory: 'OUR LOVE STORY', fallInLove: 'Fall in love', sweet: 'Sweet',
+    weddingInvitation: 'WEDDING<br />INVITATION',
+    storyOne: 'Trước đây cứ nghĩ đám cưới chỉ là một thông báo chính thức. Giờ mới hiểu đó là một dịp hiếm hoi để mọi người tụ họp. Là những chuyến đi xa chỉ để có mặt bên nhau, là sự ủng hộ vô điều kiện từ những người thương yêu.',
+    storyTwo: 'Cảm ơn gia đình, bạn bè đã luôn đồng hành. Chúng mình hẹn gặp nhau trong ngày cưới nhé!',
+    loveStoryBreak: 'OUR<br />LOVE STORY',
+    loveWind: 'Love goes with the wind, but never goes away.',
+    poemOne: 'Mong rằng khi ngoảnh lại, ta vẫn có nhau.<br />Cùng nắm tay đi đến bạc đầu...',
+    dearest: 'YOU ARE<br /><span>MY DEAREST</span><br />LOVE',
+    poemTwo: 'Núi biếc rừng xanh vang vọng tiếng lòng,<br />Giữa thế gian rộng lớn, người chung nhịp vẫn tìm thấy nhau.<br />Tình yêu đến như một lẽ tự nhiên,<br />Và chúng ta nắm tay nhau đi đến trọn đời.',
+    love: 'LOVE', weddingInfo: 'WEDDING<br />INFORMATION', oneLife: 'Thương một người, dành trọn một đời',
+    announcement: 'TRÂN TRỌNG BÁO TIN', brideFamily: 'Nhà Gái', groomFamily: 'Nhà Trai',
+    brideParents: 'Ông: <strong>HUỲNH ĐỨC DŨNG</strong><br />Bà: <strong>PHẠM THỊ VINH</strong>',
+    groomParents: 'Ông: <strong>NGUYỄN VĂN THANH</strong><br />Bà: <strong>MAI THỊ LOAN</strong>',
+    brideAddress: 'Thôn Tân Quý · Xã Chiên Đàn<br />TP. Đà Nẵng',
+    groomAddress: 'TDP Tống Văn · P. Trần Lãm<br />T. Hưng Yên',
+    weddingInvitationShort: 'WEDDING INVITATION', twoDays: 'Hai ngày chung vui',
+    inviteFamilies: 'Hai gia đình trân trọng kính mời quý vị đến chung vui cùng chúng tôi.',
+    brideFamilyCaps: 'NHÀ GÁI', groomFamilyCaps: 'NHÀ TRAI',
+    vuQuy: 'Lễ Vu Quy', thanhHon: 'Lễ Thành Hôn', sunday: 'CHỦ NHẬT', october2026: 'THÁNG 10 · 2026',
+    brideTimes: 'Lễ Vu Quy tại tư gia nhà gái lúc <strong>09:00</strong><br />Tiệc chung vui lúc <strong>10:00</strong>',
+    groomTime: 'Tiệc chung vui lúc <strong>10:00</strong>',
+    brideVenue: 'Nhà Văn Hóa Thôn Tân Quý', groomVenue: 'Tại gia đình nhà trai',
+    brideFullAddress: 'Thôn Tân Quý · Xã Chiên Đàn · TP. Đà Nẵng',
+    groomFullAddress: 'TDP Tống Văn · P. Trần Lãm · T. Hưng Yên',
+    brideLunar: 'Nhằm ngày 09 tháng 09 năm Bính Ngọ',
+    groomLunar: 'Tức ngày 16 tháng 09 năm Bính Ngọ',
+    directions: 'Xem đường đi ↗', area: 'Xem khu vực ↗',
+    saveDates: 'SAVE THE DATES', october: 'Tháng 10', calendarLabel: 'Lịch tháng 10 năm 2026',
+    brideDate: 'Nhà Gái · 18.10', groomDate: 'Nhà Trai · 25.10',
+    forever: 'FOREVER<br /><span>AND</span><br />EVER',
+    closingPoem: 'Giữa nhân gian cỏ cây vô tận,<br />riêng anh chỉ thấy em là ngọn núi xanh dịu dàng.',
+    thankYou: 'Thank you', rsvpHeading: 'Xác nhận tham dự',
+    rsvpIntro: 'Chúng mình rất mong được đón tiếp bạn.', rsvpComingSoon: 'Biểu mẫu xác nhận tham dự sẽ sớm mở. Chúng mình rất mong được đón tiếp bạn!', guestName: 'Họ và tên',
+    namePlaceholder: 'Nhập tên của bạn', attendingQuestion: 'Bạn sẽ tham dự chứ?',
+    attendingYes: 'Có, tôi sẽ tham dự', attendingNo: 'Tôi bận, rất tiếc không thể tham dự',
+    whichEvent: 'Bạn tham dự ngày nào?', chooseDate: 'Chọn ngày',
+    brideOption: 'Nhà Gái · 18/10', groomOption: 'Nhà Trai · 25/10', bothOption: 'Cả hai ngày',
+    sendRsvp: 'Gửi xác nhận', interactions: 'Tương tác với thiệp', music: 'Bật nhạc',
+    musicTitle: 'Nhạc nền', messageTitle: 'Gửi lời chúc', messageButton: 'Gửi lời chúc…', heart: 'Bắn tim',
+    rsvpUnavailable: 'Biểu mẫu chưa được kết nối để lưu xác nhận. Vui lòng thử lại sau.',
+    musicUnavailable: 'Chưa có file nhạc nền. Bạn có thể gửi bài nhạc muốn dùng.',
+    countdownDone: 'Đã đến ngày vui!', day: 'ngày', hour: 'giờ', minute: 'phút', second: 'giây',
+    weekdays: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
+    calendarDate: date => `${date} tháng 10`, calendarWeddingDate: date => `${date} tháng 10, ngày cưới`,
+    introPhoto: 'Ảnh cưới của Mỹ Dung và Tuấn',
+    photoPlaceholder: 'Ảnh cưới của Mỹ Dung & Tuấn', photoLabel: index => `Ảnh cưới thứ ${index} của Mỹ Dung và Tuấn`
+  },
+  en: {
+    pageTitle: 'Mỹ Dung & Tuấn | Wedding Invitation',
+    description: 'Wedding invitation for Huỳnh Thị Mỹ Dung and Nguyễn Văn Tuấn.',
+    welcome: 'Welcome to our wedding',
+    heroQuote: 'I love three things in this world:<br />the sun, the moon and you.<br />The sun for morning, the moon for night,<br />and you forever.',
+    married: 'We got married', bride: 'BRIDE', groom: 'GROOM',
+    wedding: 'WEDDING', invitation: 'INVITATION',
+    introThanks: 'To our family and friends, thank you for celebrating our special day, supporting us and sharing our love.',
+    introTagline: 'The right love | The right moment | A lifetime together',
+    loveStory: 'OUR LOVE STORY', fallInLove: 'Fall in love', sweet: 'Sweet',
+    weddingInvitation: 'WEDDING<br />INVITATION',
+    storyOne: 'We once thought a wedding was simply a formal announcement. Now we know it is a rare chance to bring everyone together: journeys made just to be with us, and unwavering support from those we love.',
+    storyTwo: 'Thank you to our family and friends for always being by our side. We cannot wait to see you on our wedding days!',
+    loveStoryBreak: 'OUR<br />LOVE STORY',
+    loveWind: 'Love goes with the wind, but never goes away.',
+    poemOne: 'May we always find each other when we look back.<br />Hand in hand, growing old together...',
+    dearest: 'YOU ARE<br /><span>MY DEAREST</span><br />LOVE',
+    poemTwo: 'The green mountains and forests echo our hearts.<br />In this wide world, two souls found the same rhythm.<br />Love came as naturally as the seasons,<br />and we chose to walk through life together.',
+    love: 'LOVE', weddingInfo: 'WEDDING<br />INFORMATION', oneLife: 'One love, for a lifetime',
+    announcement: 'WE ARE DELIGHTED TO ANNOUNCE', brideFamily: "Bride's Family", groomFamily: "Groom's Family",
+    brideParents: 'Father: <strong>HUỲNH ĐỨC DŨNG</strong><br />Mother: <strong>PHẠM THỊ VINH</strong>',
+    groomParents: 'Father: <strong>NGUYỄN VĂN THANH</strong><br />Mother: <strong>MAI THỊ LOAN</strong>',
+    brideAddress: 'Tân Quý Hamlet · Chiên Đàn Commune<br />Đà Nẵng City',
+    groomAddress: 'Tống Văn Neighborhood · Trần Lãm Ward<br />Hưng Yên Province',
+    weddingInvitationShort: 'WEDDING INVITATION', twoDays: 'Two days to celebrate',
+    inviteFamilies: 'Our families warmly invite you to celebrate with us.',
+    brideFamilyCaps: "BRIDE'S FAMILY", groomFamilyCaps: "GROOM'S FAMILY",
+    vuQuy: 'Vu Quy Ceremony', thanhHon: 'Wedding Ceremony', sunday: 'SUNDAY', october2026: 'OCTOBER · 2026',
+    brideTimes: "Vu Quy ceremony at the bride's family home at <strong>9:00 AM</strong><br />Reception at <strong>10:00 AM</strong>",
+    groomTime: 'Reception at <strong>10:00 AM</strong>',
+    brideVenue: 'Tân Quý Hamlet Cultural House', groomVenue: "Groom's family home",
+    brideFullAddress: 'Tân Quý Hamlet · Chiên Đàn Commune · Đà Nẵng City',
+    groomFullAddress: 'Tống Văn Neighborhood · Trần Lãm Ward · Hưng Yên Province',
+    brideLunar: '9th day of the 9th lunar month, Year of Bính Ngọ',
+    groomLunar: '16th day of the 9th lunar month, Year of Bính Ngọ',
+    directions: 'Get directions ↗', area: 'View area ↗',
+    saveDates: 'SAVE THE DATES', october: 'October', calendarLabel: 'October 2026 calendar',
+    brideDate: "Bride's family · Oct 18", groomDate: "Groom's family · Oct 25",
+    forever: 'FOREVER<br /><span>AND</span><br />EVER',
+    closingPoem: 'Among all the wonders of this world,<br />you are the gentle mountain I will always see.',
+    thankYou: 'Thank you', rsvpHeading: 'RSVP',
+    rsvpIntro: 'We look forward to celebrating with you.', rsvpComingSoon: 'RSVP will open soon. We look forward to celebrating with you!', guestName: 'Full name',
+    namePlaceholder: 'Enter your name', attendingQuestion: 'Will you attend?',
+    attendingYes: 'Yes, I will attend', attendingNo: 'Sorry, I cannot attend',
+    whichEvent: 'Which celebration will you attend?', chooseDate: 'Choose a date',
+    brideOption: "Bride's family · Oct 18", groomOption: "Groom's family · Oct 25", bothOption: 'Both days',
+    sendRsvp: 'Send RSVP', interactions: 'Invitation interactions', music: 'Play music',
+    musicTitle: 'Background music', messageTitle: 'Send a wish', messageButton: 'Send a wish…', heart: 'Send hearts',
+    rsvpUnavailable: 'The RSVP form is not connected yet. Please try again later.',
+    musicUnavailable: 'Background music has not been added yet.',
+    countdownDone: 'The celebration is here!', day: 'days', hour: 'hours', minute: 'minutes', second: 'seconds',
+    weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    calendarDate: date => `October ${date}`, calendarWeddingDate: date => `October ${date}, wedding day`,
+    introPhoto: 'Wedding photo of Mỹ Dung and Tuấn',
+    photoPlaceholder: 'Wedding photo of Mỹ Dung & Tuấn', photoLabel: index => `Wedding photo ${index} of Mỹ Dung and Tuấn`
+  }
+};
+
+const requestedLanguage = new URLSearchParams(location.search).get('lang');
+let savedLanguage = 'vi';
+try { savedLanguage = localStorage.getItem('wedding-language') || 'vi'; } catch (_) {}
+let currentLanguage = requestedLanguage === 'vi' || requestedLanguage === 'en'
+  ? requestedLanguage
+  : (savedLanguage === 'en' ? 'en' : 'vi');
+
+function translate(key) { return translations[currentLanguage][key]; }
+
+function applyLanguage(language, updateUrl = false) {
+  currentLanguage = language;
+  document.documentElement.lang = language;
+  document.title = translate('pageTitle');
+  document.querySelector('meta[name="description"]').content = translate('description');
+  document.querySelectorAll('[data-i18n]').forEach(element => { element.textContent = translate(element.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-html]').forEach(element => { element.innerHTML = translate(element.dataset.i18nHtml); });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => { element.placeholder = translate(element.dataset.i18nPlaceholder); });
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(element => { element.setAttribute('aria-label', translate(element.dataset.i18nAriaLabel)); });
+  document.querySelectorAll('[data-i18n-title]').forEach(element => { element.title = translate(element.dataset.i18nTitle); });
+  document.querySelectorAll('.language-switch button').forEach(button => { button.setAttribute('aria-pressed', String(button.dataset.lang === language)); });
+  document.querySelectorAll('.photo:empty').forEach((element, index) => {
+    element.dataset.placeholder = translate('photoPlaceholder');
+    element.setAttribute('aria-label', translate('photoLabel')(index + 1));
+  });
+  const status = document.getElementById('form-status');
+  if (status.dataset.messageKey) status.textContent = translate(status.dataset.messageKey);
+  window.refreshCalendar?.();
+  window.updateCountdowns?.();
+  try { localStorage.setItem('wedding-language', language); } catch (_) {}
+  if (updateUrl) {
+    const url = new URL(location.href);
+    url.searchParams.set('lang', language);
+    history.replaceState(null, '', url);
+  }
+}
+
+document.querySelectorAll('.language-switch button').forEach(button => {
+  button.addEventListener('click', () => applyLanguage(button.dataset.lang, true));
+});
+
+window.weddingI18n = { t: translate, getLanguage: () => currentLanguage };
+applyLanguage(currentLanguage);

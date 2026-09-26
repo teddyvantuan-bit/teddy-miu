@@ -1,0 +1,43 @@
+/* Typography measured from the CineLove reference invitation. Font files remain
+   on CineLove's font host; this project does not copy or redistribute them. */
+body, .rsvp, .floating-actions, .language-switch { font-family: Quicksand, 'Be Vietnam Pro', sans-serif; }
+h2, h3, .large-serif, .eyebrow, .ribbon, .hero, .love-header, .event-date { font-weight: 500; }
+.hero-top > p:first-child { font-family: Mallong, 'Cormorant Garamond', serif; font-size: 34px; font-weight: 700; }
+.hero-quote { font-family: Quicksand, 'Be Vietnam Pro', sans-serif; font-size: 20px; font-weight: 500; line-height: 1.35; }
+.hero-center .script { font-family: 'Katty Diona', 'Great Vibes', cursive; font-size: 56px; font-weight: 400; }
+.hero-bottom strong { font-family: Mallong, 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; }
+.hero-bottom span, .hero-bottom small { font-family: Signora, 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; }
+.ribbon { font-family: 'Belinda Avenue', 'Cormorant Garamond', serif; font-size: 26px; color: #222; }
+.intro-overlay p { font-family: Quicksand, 'Be Vietnam Pro', sans-serif; font-size: 18px; font-weight: 500; }
+.intro-overlay span { font-family: Signora, 'Cormorant Garamond', serif; font-size: 29px; }
+.eyebrow { font-family: Mallong, 'Cormorant Garamond', serif; }
+.story-heading .eyebrow { font-size: 39px; font-weight: 700; }
+.story-heading .script { font-family: Quicksand, 'Be Vietnam Pro', sans-serif; font-size: 21px; color: #282828; }
+.story-heading .soft { font-family: Gillastone, 'Great Vibes', cursive; font-size: 105px; color: #d63030; line-height: .9; margin: 0; }
+.story-copy h2 { font-family: Mallong, 'Cormorant Garamond', serif; font-size: 32px; }
+.story-copy p { font-family: 'Belinda Avenue', 'Cormorant Garamond', serif; font-size: 21px; line-height: 1.7; }
+.story-copy .story-date { font-family: Signora, 'Cormorant Garamond', serif; }
+.love-header { font-family: 'Moon Light', 'Cormorant Garamond', serif; font-size: 43px; color: #c91212; }
+.love-header em { font-family: BethanWhite, 'Great Vibes', cursive; font-size: 25px; color: #252525; }
+.poem { font-family: 'Soul Note Display', 'Cormorant Garamond', serif; font-size: 25px; line-height: 1.6; }
+.large-serif { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; font-size: 38px; line-height: 1.1; }
+.details-intro h2 { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; font-size: 35px; }
+.parents .eyebrow, .family-label, .events h2, .calendar-section h2, .rsvp h2 { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; }
+.event-card h3 { font-family: 'Katty Diona', 'Great Vibes', cursive; }
+.event-date, .calendar, .countdowns p { font-family: Signora, 'Cormorant Garamond', serif; }
+.closing .script { font-family: 'The Hamstter', 'Great Vibes', cursive; }
+@media (max-width: 500px) {
+  .hero-top > p:first-child { font-size: 29px; }
+  .hero-quote { font-size: 16px; }
+  .hero-center .script { font-size: 48px; }
+  .hero-bottom strong { font-size: 23px; }
+  .hero-bottom span, .hero-bottom small { font-size: 25px; }
+  .ribbon { font-size: 19px; }
+  .story-heading .eyebrow { font-size: 32px; }
+  .story-heading .soft { font-size: 80px; }
+  .story-copy h2 { font-size: 29px; }
+  .story-copy p { font-size: 19px; }
+  .love-header { font-size: 36px; }
+  .poem { font-size: 22px; }
+  .large-serif { font-size: 33px; }
+}

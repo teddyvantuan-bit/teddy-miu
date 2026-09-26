@@ -1,0 +1,14 @@
+/* The two supplied landscape collages contain several portraits. Crop them in CSS
+   so their original files can remain untouched in the GitHub repository. */
+.photo:empty::before { display: none; }
+.hero { --hero-image: url("BIAaa.jpg"); background-position: 100% center; background-size: auto 100%; background-image: linear-gradient(180deg,#303b3b80 0%,#242c2920 40%,#17201fc9 100%),var(--hero-image); }
+.intro-photo { --intro-image: url("0%20(9).jpg"); background-position: 100% center; background-size: auto 185%; }
+.story-photo-one { --story-one-image: url("0%20(9).jpg"); background-size: 415% auto; background-position: 0 32%; }
+.wide-photo { --wide-image: url("BIAaa.jpg"); background-position: 100% center; background-size: auto 165%; }
+.pair-one { --pair-one-image: url("0%20(9).jpg"); background-size: 430% auto; background-position: 0 30%; }
+.pair-two { --pair-two-image: url("0%20(9).jpg"); background-size: 430% auto; background-position: 31% 30%; }
+.details-photo { --details-image: url("0%20(9).jpg"); background-position: 100% center; background-size: auto 175%; }
+.closing-photo { --closing-image: url("BIAaa.jpg"); background-position: 100% center; background-size: auto 100%; }
+.rsvp form[hidden] { display: none; }
+.rsvp { padding-bottom: 55px; }
+.rsvp > p { max-width: 380px; margin: 18px auto 0; line-height: 1.7; }
