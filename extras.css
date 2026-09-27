@@ -108,10 +108,10 @@ body.modal-open .wish-feed, body.lb-open .wish-feed { display: none; }
 .hero-bottom strong { white-space: nowrap; font-size: min(28px, calc((min(100vw, 640px) - 72px) / 15.8)) !important; }
 
 /* ---------- Lotus countdowns: green for Nhà Gái, red for Nhà Trai ---------- */
-.lotus-row { display: grid !important; grid-template-columns: 1fr !important; gap: 26px !important; justify-items: center; margin-top: 44px !important; }
+.lotus-row { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 14px !important; justify-items: center; align-items: start; margin-top: 36px !important; }
 .lotus {
   --p0: #d6ead0; --p1: #bfdcb4; --p2: #a7cd99; --p3: #8ebd7f; --stroke: #4f7d45; --leaf: #5f8f55; --ink: #2f5d2a; --glow: #9ccf8c55;
-  position: relative; width: min(100%, 380px); aspect-ratio: 360 / 330; container-type: inline-size;
+  position: relative; width: min(100%, 290px); aspect-ratio: 360 / 330; container-type: inline-size;
   padding: 0 !important; border: 0 !important;
 }
 .lotus-groom { --p0: #fbdcda; --p1: #f5c0bd; --p2: #eca19d; --p3: #e1817c; --stroke: #a5222c; --leaf: #8e1b24; --ink: #8e1b24; --glow: #f0a3a355; }
@@ -130,15 +130,15 @@ body.modal-open .wish-feed, body.lb-open .wish-feed { display: none; }
 }
 @keyframes lotus-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.025); } }
 .lotus-body {
-  position: absolute; left: 11%; right: 11%; top: 52%; bottom: 9%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2cqw;
-  padding: 2.5cqw 2cqw; border-radius: 22px;
+  position: absolute; left: 7%; right: 7%; top: 50%; bottom: 8%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5cqw;
+  padding: 3cqw 2.5cqw; border-radius: 7cqw;
   background: #fffdf8d9; box-shadow: 0 4px 18px #0000001a, inset 0 0 0 1px #ffffff; backdrop-filter: blur(2px);
 }
-.lotus-label { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; font-size: clamp(13px, 4.6cqw, 18px); letter-spacing: .08em; color: var(--ink); text-transform: uppercase; }
+.lotus-label { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; font-size: clamp(9px, 5.4cqw, 16px); letter-spacing: .06em; white-space: nowrap; color: var(--ink); text-transform: uppercase; }
 .lotus .cd { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2cqw; width: 100%; }
 .lotus .cd[hidden], .lotus .cd-done[hidden] { display: none; }
-.cd-unit { display: grid; justify-items: center; gap: 2px; padding: 1.6cqw 0; border-radius: 12px; background: #fff; box-shadow: 0 1px 0 var(--stroke), 0 2px 8px #00000012; }
-.cd-unit b { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(20px, 8cqw, 32px); line-height: 1.05; color: var(--ink); font-variant-numeric: tabular-nums; }
-.cd-unit small { font-size: clamp(10px, 3.2cqw, 12px); letter-spacing: .08em; color: #6f6763; text-transform: uppercase; }
-.cd-done { margin: 0 !important; font-family: 'Katty Diona', 'Great Vibes', cursive; font-size: clamp(24px, 9cqw, 36px) !important; color: var(--ink); }
+.cd-unit { display: grid; justify-items: center; gap: 0; padding: 1.8cqw 0 1.4cqw; border-radius: 3.5cqw; background: #fff; box-shadow: 0 1px 0 var(--stroke), 0 2px 8px #00000012; }
+.cd-unit b { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(13px, 9cqw, 28px); line-height: 1.05; color: var(--ink); font-variant-numeric: tabular-nums; }
+.cd-unit small { font-size: clamp(7px, 3.4cqw, 11px); letter-spacing: .04em; color: #6f6763; text-transform: uppercase; }
+.cd-done { margin: 0 !important; font-family: 'Katty Diona', 'Great Vibes', cursive; font-size: clamp(16px, 10cqw, 30px) !important; color: var(--ink); }
