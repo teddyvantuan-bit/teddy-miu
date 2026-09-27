@@ -6,7 +6,7 @@
 .ph-frame.loaded .ph-img { opacity: 1; }
 .hero { background-image: none !important; isolation: isolate; }
 .hero::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg,#303b3b8c 0%,#242c2915 38%,#242c2915 55%,#17201fcc 100%); }
-.hero > :not(.ph-frame) { position: relative; z-index: 2; }
+.hero > :not(.ph-frame):not(.language-switch) { position: relative; z-index: 2; }
 .intro-photo::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(#0000 45%,#26261fa6); }
 .intro-overlay { z-index: 2; }
 
