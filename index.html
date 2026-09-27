@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f7f5f0" />
     <meta name="description" content="Thiệp cưới của Huỳnh Thị Mỹ Dung và Nguyễn Văn Tuấn." />
-    <title>Mỹ Dung & Tuấn | Thiệp cưới</title>
+    <title>Mỹ Dung - Văn Tuấn | Thiệp cưới</title>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mỹ Dung & Tuấn · Thiệp cưới 18.10 & 25.10.2026" />
-    <meta property="og:description" content="Trân trọng kính mời bạn đến chung vui trong ngày cưới của Mỹ Dung & Tuấn." />
-    <meta property="og:image" content="https://teddyvantuan-bit.github.io/teddy-miu/assets/og.jpg" />
+    <meta property="og:title" content="Mỹ Dung - Văn Tuấn · Thiệp cưới 18.10 & 25.10.2026" />
+    <meta property="og:description" content="Trân trọng kính mời bạn đến chung vui trong ngày cưới của Mỹ Dung - Văn Tuấn." />
+    <meta property="og:image" content="https://teddyvantuan-bit.github.io/teddy-sunny/assets/og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://teddyvantuan-bit.github.io/teddy-miu/" />
+    <meta property="og:url" content="https://teddyvantuan-bit.github.io/teddy-sunny/" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,7 +76,7 @@
         <p data-i18n="guestCardLine">đến dự lễ cưới và chung vui cùng gia đình chúng mình</p>
       </section>
 
-      <section class="intro-photo photo" data-photo="1w4a0299.jpg" aria-label="Ảnh cưới của Mỹ Dung và Tuấn" data-i18n-aria-label="introPhoto">
+      <section class="intro-photo photo" data-photo="1w4a0299.jpg" aria-label="Ảnh cưới của Mỹ Dung - Văn Tuấn" data-i18n-aria-label="introPhoto">
         <div class="intro-overlay">
           <p data-i18n="introThanks">To our family and friends, thank you for celebrating our special day, supporting us and sharing our love.</p>
           <span data-i18n="introTagline">Right love | Right reason | Right for you</span>
@@ -139,8 +139,6 @@
           <p class="venue" data-i18n="brideVenue">Nhà Văn Hóa Thôn Tân Quý</p>
           <address data-i18n="brideFullAddress">Thôn Tân Quý · Xã Chiên Đàn · TP. Đà Nẵng</address>
           <small data-i18n="brideLunar">Nhằm ngày 09 tháng 09 năm Bính Ngọ</small>
-          <div class="map-box" data-map="bride"></div>
-          <a class="map-button" data-map-link="bride" href="#" target="_blank" rel="noopener noreferrer"><span data-i18n="directions">Chỉ đường</span> ↗</a>
         </div>
         <div class="event-card groom-card">
           <span class="event-kind" data-i18n="groomFamilyCaps">NHÀ TRAI</span>
@@ -150,8 +148,6 @@
           <p class="venue" data-i18n="groomVenue">Tại gia đình nhà trai</p>
           <address data-i18n="groomFullAddress">TDP Tống Văn · P. Trần Lãm · T. Hưng Yên</address>
           <small data-i18n="groomLunar">Tức ngày 16 tháng 09 năm Bính Ngọ</small>
-          <div class="map-box" data-map="groom"></div>
-          <a class="map-button" data-map-link="groom" href="#" target="_blank" rel="noopener noreferrer"><span data-i18n="directions">Chỉ đường</span> ↗</a>
         </div>
       </section>
 
@@ -218,7 +214,6 @@
     <div class="floating-actions" aria-label="Tương tác với thiệp" data-i18n-aria-label="interactions">
       <button type="button" id="wish-button" class="wish-button"><span aria-hidden="true">💬</span> <span data-i18n="messageButton">Gửi lời chúc…</span></button>
       <button type="button" id="heart-button" title="Bắn tim" data-i18n-title="heart" aria-label="Bắn tim" data-i18n-aria-label="heart">♡</button>
-      <button type="button" id="gift-button" class="gift-button" hidden title="Mừng cưới" data-i18n-title="giftTitle" aria-label="Mừng cưới" data-i18n-aria-label="giftTitle"><span aria-hidden="true">🎁</span></button>
     </div>
     <div class="modal" id="wish-modal" hidden role="dialog" aria-modal="true" aria-labelledby="wish-title">
       <form class="modal-card" id="wish-form" novalidate>
@@ -230,14 +225,6 @@
         <button type="submit" data-i18n="sendWish">Gửi lời chúc</button>
         <p class="form-status" role="status"></p>
       </form>
-    </div>
-    <div class="modal" id="gift-modal" hidden role="dialog" aria-modal="true" aria-labelledby="gift-title">
-      <div class="modal-card gift-card">
-        <button type="button" class="modal-close" aria-label="Đóng">✕</button>
-        <h2 id="gift-title" data-i18n="giftTitle">Mừng cưới</h2>
-        <p class="gift-note" data-i18n="giftNote">Cảm ơn tình cảm của bạn dành cho chúng mình.</p>
-        <div class="gift-list"></div>
-      </div>
     </div>
     <canvas class="petals" id="petals" aria-hidden="true"></canvas>
     <button type="button" id="music-button" class="music-disc" aria-label="Bật nhạc" aria-pressed="false"><span class="record"></span><span class="arm"></span><span class="off"></span></button>

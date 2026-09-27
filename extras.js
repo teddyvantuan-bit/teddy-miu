@@ -1,5 +1,5 @@
 /* Invitation extras: scroll animations, falling petals, personal guest name,
-   maps, RSVP + wishes (Google Sheet backend) and the wedding-gift box. */
+   RSVP and wishes (Google Sheet backend). */
 (() => {
   const CFG = window.WEDDING_CONFIG || {};
   const t = key => weddingI18n.t(key);
@@ -142,27 +142,6 @@
     const radio = document.querySelector(`#rsvp-form input[name="side"][value="${invitedSide}"]`);
     if (radio) radio.checked = true;
   }
-
-  /* ---------- Maps ---------- */
-  function mapLinks(key) {
-    const place = (CFG.maps || {})[key] || '';
-    const isUrl = /^https?:\/\//.test(place);
-    return {
-      embed: isUrl ? '' : `https://maps.google.com/maps?q=${encodeURIComponent(place)}&z=15&output=embed`,
-      open: isUrl ? place : `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place)}`
-    };
-  }
-  document.querySelectorAll('[data-map]').forEach(box => {
-    const { embed } = mapLinks(box.dataset.map);
-    if (!embed) { box.remove(); return; }
-    const frame = document.createElement('iframe');
-    frame.title = 'Google Maps';
-    frame.loading = 'lazy';
-    frame.referrerPolicy = 'no-referrer-when-downgrade';
-    frame.src = embed;
-    box.append(frame);
-  });
-  document.querySelectorAll('[data-map-link]').forEach(a => { a.href = mapLinks(a.dataset.mapLink).open; });
 
   /* ---------- Modals ---------- */
   let lastFocus = null;
@@ -325,57 +304,5 @@
     }).catch(() => {});
   }
 
-  /* ---------- Wedding gift ---------- */
-  const gifts = (CFG.gifts || []).filter(g => g.account || g.qr);
-  const giftButton = document.getElementById('gift-button');
-  const giftList = document.querySelector('.gift-list');
-  function renderGifts() {
-    giftList.replaceChildren();
-    gifts.forEach(g => {
-      const card = document.createElement('div');
-      card.className = 'gift-item';
-      const label = document.createElement('span');
-      label.className = 'gift-side';
-      label.textContent = t(g.side === 'bride' ? 'giftBride' : 'giftGroom');
-      card.append(label);
-      if (g.qr) {
-        const img = document.createElement('img');
-        img.src = g.qr;
-        img.alt = `QR ${g.name}`;
-        img.loading = 'lazy';
-        card.append(img);
-      }
-      const name = document.createElement('strong');
-      name.textContent = g.name;
-      card.append(name);
-      if (g.bank) {
-        const bank = document.createElement('small');
-        bank.textContent = g.bank;
-        card.append(bank);
-      }
-      if (g.account) {
-        const row = document.createElement('div');
-        row.className = 'gift-account';
-        const num = document.createElement('code');
-        num.textContent = g.account;
-        const copy = document.createElement('button');
-        copy.type = 'button';
-        copy.textContent = t('copy');
-        copy.addEventListener('click', async () => {
-          try { await navigator.clipboard.writeText(g.account.replace(/\s/g, '')); } catch (_) {}
-          if (window.showToast) window.showToast(t('copied'));
-        });
-        row.append(num, copy);
-        card.append(row);
-      }
-      giftList.append(card);
-    });
-  }
-  if (gifts.length) {
-    giftButton.hidden = false;
-    renderGifts();
-    giftButton.addEventListener('click', () => openModal('gift-modal'));
-  }
-
-  window.refreshExtras = () => { if (gifts.length) renderGifts(); };
+  window.refreshExtras = () => {};
 })();

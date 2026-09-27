@@ -12,14 +12,14 @@
   el.className = 'opening';
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-modal', 'true');
-  el.setAttribute('aria-label', 'Thiệp cưới Mỹ Dung & Tuấn');
+  el.setAttribute('aria-label', 'Thiệp cưới Mỹ Dung - Văn Tuấn');
   el.innerHTML = `
     <div class="op-curtain op-left"></div>
     <div class="op-curtain op-right"></div>
     <div class="op-sparkles" aria-hidden="true"></div>
     <div class="op-stage">
       <p class="op-eyebrow" data-i18n="opEyebrow">WEDDING INVITATION</p>
-      <h1 class="op-names">Mỹ Dung <span>&amp;</span> Tuấn</h1>
+      <h1 class="op-names"><b>Mỹ Dung</b> <span>-</span> <b>Văn Tuấn</b></h1>
       <p class="op-date">18 · 10 &nbsp;&amp;&nbsp; 25 · 10 · 2026</p>
       <button type="button" class="op-envelope" aria-label="Mở thiệp">
         <span class="op-back"></span>

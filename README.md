@@ -1,4 +1,4 @@
-# Thiệp cưới Mỹ Dung & Tuấn
+# Thiệp cưới Mỹ Dung - Văn Tuấn
 
 Trang tĩnh để đăng bằng GitHub Pages. Mở `index.html` để xem bản nháp.
 
@@ -20,7 +20,7 @@ Bản VI giữ các tiêu đề và dòng trang trí tiếng Anh như mẫu tham
 3. Tạo Google Form theo [GOOGLE_FORM.md](GOOGLE_FORM.md), rồi gửi link trả lời để kết nối. Phần xác nhận hiện thông báo “sắp mở”; biểu mẫu được ẩn để không nhận dữ liệu vào nơi chưa kết nối.
 4. Nhạc nền `assets/music.mp3` phát nguyên bài, lặp lại. Trang tự phát khi mở; nếu trình duyệt chặn tự phát (đa số điện thoại), nhạc bắt đầu ngay khi khách chạm vào màn hình lần đầu. Đĩa nhạc quay ở góc phải trên để tắt/bật.
 
-Website: `https://teddyvantuan-bit.github.io/teddy-miu/`.
+Website: `https://teddyvantuan-bit.github.io/teddy-sunny/`.
 
 Thiết kế được viết lại từ đầu theo bố cục tham khảo của CineLove; không sao chép ảnh, mã hay nhạc của trang mẫu.
 
@@ -28,6 +28,5 @@ Thiết kế được viết lại từ đầu theo bố cục tham khảo của
 
 - **Xác nhận tham dự + lời chúc** lưu vào Google Sheet "Thiệp cưới – Xác nhận tham dự & Lời chúc" (script trong `backend/Code.gs`, link web app trong `config.js`). Bỏ tick "Hiện trên web" để ẩn một lời chúc.
 - **Link mời riêng:** mở `tao-link.html`, dán danh sách tên khách → mỗi khách một link `?to=Tên&side=bride|groom`.
-- **Bản đồ, mừng cưới:** sửa trong `config.js` (`maps`, `gifts`). Nút mừng cưới chỉ hiện khi có số tài khoản hoặc ảnh QR.
 - **Hiệu ứng:** chữ/ảnh hiện dần khi cuộn (1,3s), cánh hoa rơi, ảnh bìa zoom chậm (`extras.js`, `extras.css`).
 - **Ảnh xem trước khi chia sẻ link:** `assets/og.jpg`.

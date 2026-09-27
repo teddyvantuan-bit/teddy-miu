@@ -12,7 +12,7 @@ const translations = {
     rsvpThanksYes: name => `Cảm ơn ${name}! Chúng mình rất vui được gặp bạn trong ngày cưới 💕`,
     rsvpThanksNo: name => `Cảm ơn ${name} đã báo cho chúng mình. Hẹn gặp bạn dịp khác nhé!`,
     wishThanks: 'Cảm ơn lời chúc của bạn! 💕', sendFailed: 'Chưa gửi được. Bạn kiểm tra mạng rồi thử lại nhé.',
-    pageTitle: 'Mỹ Dung & Tuấn | Thiệp cưới',
+    pageTitle: 'Mỹ Dung - Văn Tuấn | Thiệp cưới',
     description: 'Thiệp cưới của Huỳnh Thị Mỹ Dung và Nguyễn Văn Tuấn.',
     welcome: 'Welcome to our wedding',
     heroQuote: 'I love three things in this world:<br />the sun, the moon and you.<br />The sun for morning, the moon for night,<br />and you forever.',
@@ -65,8 +65,8 @@ const translations = {
     countdownDone: 'Đã đến ngày vui!', day: 'ngày', hour: 'giờ', minute: 'phút', second: 'giây',
     weekdays: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
     calendarDate: date => `${date} tháng 10`, calendarWeddingDate: date => `${date} tháng 10, ngày cưới`,
-    introPhoto: 'Ảnh cưới của Mỹ Dung và Tuấn',
-    photoPlaceholder: 'Ảnh cưới của Mỹ Dung & Tuấn', photoLabel: index => `Ảnh cưới thứ ${index} của Mỹ Dung và Tuấn`
+    introPhoto: 'Ảnh cưới của Mỹ Dung - Văn Tuấn',
+    photoPlaceholder: 'Ảnh cưới của Mỹ Dung - Văn Tuấn', photoLabel: index => `Ảnh cưới thứ ${index} của Mỹ Dung - Văn Tuấn`
   },
   en: {
     opEyebrow: 'WEDDING INVITATION', opHint: 'Tap the seal to open', opGuestDefault: 'Our dear guest',
@@ -81,7 +81,7 @@ const translations = {
     rsvpThanksYes: name => `Thank you, ${name}! We can't wait to see you 💕`,
     rsvpThanksNo: name => `Thank you for letting us know, ${name}. We'll miss you!`,
     wishThanks: 'Thank you for your wishes! 💕', sendFailed: 'Could not send. Please check your connection and try again.',
-    pageTitle: 'Mỹ Dung & Tuấn | Wedding Invitation',
+    pageTitle: 'Mỹ Dung - Văn Tuấn | Wedding Invitation',
     description: 'Wedding invitation for Huỳnh Thị Mỹ Dung and Nguyễn Văn Tuấn.',
     welcome: 'Welcome to our wedding',
     heroQuote: 'I love three things in this world:<br />the sun, the moon and you.<br />The sun for morning, the moon for night,<br />and you forever.',
@@ -134,8 +134,8 @@ const translations = {
     countdownDone: 'The celebration is here!', day: 'days', hour: 'hours', minute: 'minutes', second: 'seconds',
     weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     calendarDate: date => `October ${date}`, calendarWeddingDate: date => `October ${date}, wedding day`,
-    introPhoto: 'Wedding photo of Mỹ Dung and Tuấn',
-    photoPlaceholder: 'Wedding photo of Mỹ Dung & Tuấn', photoLabel: index => `Wedding photo ${index} of Mỹ Dung and Tuấn`
+    introPhoto: 'Wedding photo of Mỹ Dung - Văn Tuấn',
+    photoPlaceholder: 'Wedding photo of Mỹ Dung - Văn Tuấn', photoLabel: index => `Wedding photo ${index} of Mỹ Dung - Văn Tuấn`
   }
 };
 
