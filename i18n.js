@@ -1,5 +1,6 @@
 const translations = {
   vi: {
+    opEyebrow: 'WEDDING INVITATION', opHint: 'Chạm vào con dấu để mở thiệp', opGuestDefault: 'Quý khách',
     dearGuest: 'Trân trọng kính mời', guestCardLine: 'đến dự lễ cưới và chung vui cùng gia đình chúng mình',
     phoneLabel: 'Số điện thoại (không bắt buộc)', guestCount: 'Số người tham dự (kể cả bạn)',
     wishLabel: 'Lời chúc gửi cô dâu chú rể', wishPlaceholder: 'Viết đôi lời chúc…', yourName: 'Tên của bạn',
@@ -68,6 +69,7 @@ const translations = {
     photoPlaceholder: 'Ảnh cưới của Mỹ Dung & Tuấn', photoLabel: index => `Ảnh cưới thứ ${index} của Mỹ Dung và Tuấn`
   },
   en: {
+    opEyebrow: 'WEDDING INVITATION', opHint: 'Tap the seal to open', opGuestDefault: 'Our dear guest',
     dearGuest: 'We warmly invite', guestCardLine: 'to celebrate our wedding with our families',
     phoneLabel: 'Phone number (optional)', guestCount: 'Number of guests (including you)',
     wishLabel: 'Your wishes for the couple', wishPlaceholder: 'Write a few words…', yourName: 'Your name',
