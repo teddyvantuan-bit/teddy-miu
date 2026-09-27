@@ -74,26 +74,60 @@ document.getElementById('heart-button').addEventListener('click', event => {
 
 const music = document.getElementById('background-music');
 const musicButton = document.getElementById('music-button');
-music.volume = 0.55;
+const musicHint = document.getElementById('music-hint');
+music.volume = 0.6;
+let userMuted = false;
+let resumeOnVisible = false;
 function updateMusicButton() {
   const playing = !music.paused;
+  musicButton.classList.toggle('playing', playing);
   musicButton.setAttribute('aria-pressed', String(playing));
   musicButton.setAttribute('aria-label', weddingI18n.t(playing ? 'pauseMusic' : 'music'));
-  musicButton.title = weddingI18n.t(playing ? 'pauseMusic' : 'musicTitle');
-  musicButton.textContent = playing ? '❚❚' : '♫';
+  musicButton.title = weddingI18n.t(playing ? 'pauseMusic' : 'music');
+  if (playing) musicHint.classList.remove('visible');
 }
 window.updateMusicButton = updateMusicButton;
 music.addEventListener('play', updateMusicButton);
 music.addEventListener('pause', updateMusicButton);
 updateMusicButton();
+
+function startMusic() {
+  if (userMuted || !music.paused) return Promise.resolve(true);
+  return music.play().then(() => true, () => false);
+}
+const unlockEvents = ['pointerdown', 'touchend', 'click', 'keydown'];
+function unlock(event) {
+  if (event.target.closest && event.target.closest('#music-button')) return;
+  startMusic().then(ok => { if (ok) unlockEvents.forEach(type => document.removeEventListener(type, unlock, true)); });
+}
+// Try to start right away; browsers that block autoplay start on the first tap.
+startMusic().then(ok => {
+  if (ok) return;
+  unlockEvents.forEach(type => document.addEventListener(type, unlock, true));
+  musicHint.textContent = weddingI18n.t('tapForMusic');
+  musicHint.classList.add('visible');
+  setTimeout(() => musicHint.classList.remove('visible'), 5000);
+});
+
 musicButton.addEventListener('click', async () => {
   if (!music.paused) {
+    userMuted = true;
     music.pause();
     return;
   }
+  userMuted = false;
   try {
     await music.play();
   } catch (error) {
     if (error.name !== 'AbortError') showToast(weddingI18n.t('musicUnavailable'));
+  }
+});
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    resumeOnVisible = !music.paused;
+    music.pause();
+  } else if (resumeOnVisible) {
+    music.play().catch(() => {});
   }
 });

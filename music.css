@@ -1,0 +1,118 @@
+/* Spinning record player, fixed at the top-right of the invitation. */
+.music-disc {
+  position: fixed;
+  z-index: 30;
+  top: 14px;
+  right: max(14px, calc(50vw - 320px + 14px));
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.music-disc .record {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #c9a9a6 0 17%, #3a2f2d 17.5% 19%, transparent 19.5%),
+    repeating-radial-gradient(circle, #1b1818 0 1.5px, #2c2727 1.5px 3px),
+    #1b1818;
+  box-shadow: 0 3px 12px #0005, inset 0 0 0 2px #ffffff14;
+  animation: disc-spin 3.2s linear infinite;
+  animation-play-state: paused;
+}
+.music-disc .record::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 30deg, transparent 0 12%, #ffffff2e 16%, transparent 22% 62%, #ffffff1f 66%, transparent 72%);
+}
+.music-disc .record::after {
+  content: '♥';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 11px;
+}
+.music-disc .arm {
+  position: absolute;
+  top: -3px;
+  right: -2px;
+  width: 4px;
+  height: 30px;
+  border-radius: 3px;
+  background: linear-gradient(#e9e1d6, #b9ab9c);
+  box-shadow: 0 1px 3px #0006;
+  transform-origin: 50% 3px;
+  transform: rotate(8deg);
+  transition: transform .5s ease;
+}
+.music-disc .arm::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9cfc3;
+  box-shadow: 0 1px 3px #0005;
+}
+.music-disc .arm::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -2px;
+  width: 8px;
+  height: 7px;
+  border-radius: 2px;
+  background: #8e7f73;
+}
+.music-disc.playing .record { animation-play-state: running; }
+.music-disc.playing .arm { transform: rotate(28deg); }
+.music-disc:not(.playing) .record { filter: grayscale(.4) brightness(.9); }
+.music-disc .off {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+.music-disc:not(.playing) .off { display: block; }
+.music-disc .off::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  right: 8%;
+  height: 2.5px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 0 1px #0004;
+  transform: rotate(-45deg);
+}
+.music-hint {
+  position: fixed;
+  z-index: 30;
+  top: 76px;
+  right: max(10px, calc(50vw - 320px + 10px));
+  padding: 6px 11px;
+  border-radius: 14px;
+  background: #534945e6;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+}
+.music-hint.visible { opacity: 1; }
+@keyframes disc-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .music-disc .record { animation-duration: 12s; } }
+
+/* Language switch moves to the top-left to leave room for the record. */
+.language-switch { right: auto !important; left: 14px; }

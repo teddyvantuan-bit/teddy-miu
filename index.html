@@ -24,14 +24,17 @@
     <link rel="stylesheet" href="styles.css?v=20260926b" />
     <link rel="stylesheet" href="toolbar.css?v=20260926b" />
     <link rel="stylesheet" href="reference-fonts.css?v=20260926b" />
-    <link rel="stylesheet" href="photos.css?v=20260926b" />
+    <link rel="stylesheet" href="photos.css?v=20260927a" />
     <link rel="stylesheet" href="calendar-hearts.css?v=20260926b" />
+    <link rel="stylesheet" href="music.css?v=20260927a" />
     <script defer src="i18n.js?v=20260926b"></script>
-    <script defer src="script.js?v=20260926c"></script>
+    <script defer src="script.js?v=20260927a"></script>
+    <script defer src="photos-data.js?v=20260927a"></script>
+    <script defer src="photos.js?v=20260927a"></script>
   </head>
   <body>
     <main class="page">
-      <section class="hero photo hero-photo" aria-labelledby="hero-title">
+      <section class="hero photo hero-photo" data-photo="1w4a9369.jpg" aria-labelledby="hero-title">
         <nav class="language-switch" aria-label="Ngôn ngữ / Language">
           <button type="button" data-lang="vi" aria-pressed="true">VI</button>
           <span aria-hidden="true">/</span>
@@ -53,7 +56,7 @@
 
       <div class="ribbon"><span data-i18n="wedding">WEDDING</span><span data-i18n="invitation">INVITATION</span><span>2026</span></div>
 
-      <section class="intro-photo photo" aria-label="Ảnh cưới của Mỹ Dung và Tuấn" data-i18n-aria-label="introPhoto">
+      <section class="intro-photo photo" data-photo="1w4a0299.jpg" aria-label="Ảnh cưới của Mỹ Dung và Tuấn" data-i18n-aria-label="introPhoto">
         <div class="intro-overlay">
           <p data-i18n="introThanks">To our family and friends, thank you for celebrating our special day, supporting us and sharing our love.</p>
           <span data-i18n="introTagline">Right love | Right reason | Right for you</span>
@@ -67,7 +70,7 @@
       </section>
 
       <section class="story-grid">
-        <div class="photo story-photo-one" aria-label="Ảnh cưới thứ ba"></div>
+        <div class="photo story-photo-one" data-photo="1w4a9410.jpg" aria-label="Ảnh cưới thứ ba"></div>
         <div class="story-copy">
           <h2 data-i18n-html="weddingInvitation">WEDDING<br />INVITATION</h2>
           <p data-i18n="storyOne">Trước đây cứ nghĩ đám cưới chỉ là một thông báo chính thức. Giờ mới hiểu đó là một dịp hiếm hoi để mọi người tụ họp. Là những chuyến đi xa chỉ để có mặt bên nhau, là sự ủng hộ vô điều kiện từ những người thương yêu.</p>
@@ -78,11 +81,11 @@
 
       <section class="love-section">
         <div class="love-header"><span data-i18n-html="loveStoryBreak">OUR<br />LOVE STORY</span><em data-i18n="loveWind">Love goes with the wind, but never goes away.</em></div>
-        <div class="photo wide-photo" aria-label="Ảnh cưới thứ tư"></div>
+        <div class="photo wide-photo" data-photo="1w4a9511.jpg" aria-label="Ảnh cưới thứ tư"></div>
         <p class="poem" data-i18n-html="poemOne">Mong rằng khi ngoảnh lại, ta vẫn có nhau.<br />Cùng nắm tay đi đến bạc đầu...</p>
         <div class="love-pair">
-          <div class="photo pair-one" aria-label="Ảnh cưới thứ năm"></div>
-          <div class="photo pair-two" aria-label="Ảnh cưới thứ sáu"></div>
+          <div class="photo pair-one" data-photo="1w4a9612.jpg" aria-label="Ảnh cưới thứ năm"></div>
+          <div class="photo pair-two" data-photo="1w4a9398.jpg" aria-label="Ảnh cưới thứ sáu"></div>
         </div>
         <p class="large-serif" data-i18n-html="dearest">YOU ARE<br /><span>MY DEAREST</span><br />LOVE</p>
         <p class="poem" data-i18n-html="poemTwo">Núi biếc rừng xanh vang vọng tiếng lòng,<br />Giữa thế gian rộng lớn, người chung nhịp vẫn tìm thấy nhau.<br />Tình yêu đến như một lẽ tự nhiên,<br />Và chúng ta nắm tay nhau đi đến trọn đời.</p>
@@ -91,7 +94,7 @@
       <section class="details-intro">
         <p class="eyebrow" data-i18n="love">LOVE</p>
         <h2 data-i18n-html="weddingInfo">WEDDING<br />INFORMATION</h2>
-        <div class="photo details-photo" aria-label="Ảnh cưới thứ bảy"></div>
+        <div class="photo details-photo" data-photo="1w4a0558.jpg" aria-label="Ảnh cưới thứ bảy"></div>
         <p class="poem" data-i18n="oneLife">Thương một người, dành trọn một đời</p>
       </section>
 
@@ -140,8 +143,15 @@
         </div>
       </section>
 
+      <section class="album" aria-labelledby="album-heading">
+        <p class="eyebrow" id="album-heading">OUR ALBUM</p>
+        <p class="script">Memories</p>
+        <p class="album-hint" data-i18n="albumHint">Chạm vào ảnh để xem lớn</p>
+        <div class="album-grid" data-photos="1w4a0048.jpg 1w4a0065.jpg 1w4a0149.jpg 1w4a0166.jpg 1w4a0215.jpg 1w4a0269.jpg 1w4a0373.jpg 1w4a0384.jpg 1w4a0395.jpg 1w4a0468.jpg 1w4a0496.jpg 1w4a0515.jpg 1w4a0595.jpg 1w4a0621.jpg 1w4a0649.jpg 1w4a0692.jpg 1w4a0697.jpg 1w4a0767.jpg 1w4a0895.jpg 1w4a0946.jpg 1w4a1015.jpg 1w4a8962.jpg 1w4a9072.jpg 1w4a9143.jpg 1w4a9164.jpg 1w4a9192.jpg 1w4a9205.jpg 1w4a9317.jpg 1w4a9366.jpg 1w4a9383.jpg 1w4a9447.jpg 1w4a9479.jpg 1w4a9497.jpg 1w4a9597.jpg 1w4a9608.jpg 1w4a9611.jpg 1w4a9711.jpg 1w4a9852_1.jpg 1w4a9937_1.jpg"></div>
+      </section>
+
       <section class="closing">
-        <div class="photo closing-photo" aria-label="Ảnh cưới cuối"></div>
+        <div class="photo closing-photo" data-photo="1w4a9215.jpg" aria-label="Ảnh cưới cuối"></div>
         <p class="large-serif" data-i18n-html="forever">FOREVER<br /><span>AND</span><br />EVER</p>
         <p class="poem" data-i18n-html="closingPoem">Giữa nhân gian cỏ cây vô tận,<br />riêng anh chỉ thấy em là ngọn núi xanh dịu dàng.</p>
         <h2 class="script" data-i18n="thankYou">Thank you</h2>
@@ -163,10 +173,18 @@
       </section>
     </main>
     <div class="floating-actions" aria-label="Tương tác với thiệp" data-i18n-aria-label="interactions">
-      <button type="button" id="music-button" aria-label="Bật nhạc" data-i18n-aria-label="music" title="Nhạc nền" data-i18n-title="musicTitle">♫</button>
       <button type="button" id="heart-button" title="Bắn tim" data-i18n-title="heart" aria-label="Bắn tim" data-i18n-aria-label="heart">♡</button>
     </div>
-    <audio id="background-music" src="assets/music.mp3?v=20260926b" loop preload="none"></audio>
+    <button type="button" id="music-button" class="music-disc" aria-label="Bật nhạc" aria-pressed="false"><span class="record"></span><span class="arm"></span><span class="off"></span></button>
+    <div class="music-hint" id="music-hint" role="status"></div>
+    <audio id="background-music" src="assets/music.mp3?v=20260927a" loop autoplay preload="auto"></audio>
+    <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Album">
+      <img alt="" />
+      <button type="button" class="lb-close" aria-label="Đóng">✕</button>
+      <button type="button" class="lb-prev" aria-label="Ảnh trước">‹</button>
+      <button type="button" class="lb-next" aria-label="Ảnh sau">›</button>
+      <span class="lb-count"></span>
+    </div>
     <div class="action-toast" id="action-toast" role="status" aria-live="polite"></div>
   </body>
 </html>
