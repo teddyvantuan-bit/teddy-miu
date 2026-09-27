@@ -28,15 +28,25 @@ refreshCalendar();
 function updateCountdowns() {
   document.querySelectorAll('[data-countdown]').forEach(element => {
     const distance = new Date(element.dataset.countdown).getTime() - Date.now();
+    const units = element.querySelectorAll('[data-u]');
+    if (!units.length) return;
+    const done = element.querySelector('.cd-done');
     if (distance <= 0) {
-      element.textContent = weddingI18n.t('countdownDone');
+      element.querySelector('.cd').hidden = true;
+      done.hidden = false;
+      done.textContent = weddingI18n.t('countdownDone');
       return;
     }
-    const days = Math.floor(distance / 86400000);
-    const hours = Math.floor((distance / 3600000) % 24);
-    const minutes = Math.floor((distance / 60000) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
-    element.textContent = `${days} ${weddingI18n.t('day')} · ${hours} ${weddingI18n.t('hour')} · ${minutes} ${weddingI18n.t('minute')} · ${seconds} ${weddingI18n.t('second')}`;
+    const values = {
+      d: Math.floor(distance / 86400000),
+      h: Math.floor((distance / 3600000) % 24),
+      m: Math.floor((distance / 60000) % 60),
+      s: Math.floor((distance / 1000) % 60)
+    };
+    units.forEach(unit => {
+      const text = String(values[unit.dataset.u]).padStart(2, '0');
+      if (unit.textContent !== text) unit.textContent = text;
+    });
   });
 }
 window.updateCountdowns = updateCountdowns;

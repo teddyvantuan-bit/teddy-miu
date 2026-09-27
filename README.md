@@ -1,4 +1,4 @@
-# Thiệp cưới Mỹ Dung - Văn Tuấn
+# Thiệp cưới Văn Tuấn - Mỹ Dung
 
 Trang tĩnh để đăng bằng GitHub Pages. Mở `index.html` để xem bản nháp.
 

@@ -12,8 +12,8 @@ const translations = {
     rsvpThanksYes: name => `Cảm ơn ${name}! Chúng mình rất vui được gặp bạn trong ngày cưới 💕`,
     rsvpThanksNo: name => `Cảm ơn ${name} đã báo cho chúng mình. Hẹn gặp bạn dịp khác nhé!`,
     wishThanks: 'Cảm ơn lời chúc của bạn! 💕', sendFailed: 'Chưa gửi được. Bạn kiểm tra mạng rồi thử lại nhé.',
-    pageTitle: 'Mỹ Dung - Văn Tuấn | Thiệp cưới',
-    description: 'Thiệp cưới của Huỳnh Thị Mỹ Dung và Nguyễn Văn Tuấn.',
+    pageTitle: 'Văn Tuấn - Mỹ Dung | Thiệp cưới',
+    description: 'Thiệp cưới của Nguyễn Văn Tuấn và Huỳnh Thị Mỹ Dung.',
     welcome: 'Welcome to our wedding',
     heroQuote: 'I love three things in this world:<br />the sun, the moon and you.<br />The sun for morning, the moon for night,<br />and you forever.',
     married: 'We got married', bride: 'BRIDE', groom: 'GROOM',
@@ -65,8 +65,8 @@ const translations = {
     countdownDone: 'Đã đến ngày vui!', day: 'ngày', hour: 'giờ', minute: 'phút', second: 'giây',
     weekdays: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
     calendarDate: date => `${date} tháng 10`, calendarWeddingDate: date => `${date} tháng 10, ngày cưới`,
-    introPhoto: 'Ảnh cưới của Mỹ Dung - Văn Tuấn',
-    photoPlaceholder: 'Ảnh cưới của Mỹ Dung - Văn Tuấn', photoLabel: index => `Ảnh cưới thứ ${index} của Mỹ Dung - Văn Tuấn`
+    introPhoto: 'Ảnh cưới của Văn Tuấn - Mỹ Dung',
+    photoPlaceholder: 'Ảnh cưới của Văn Tuấn - Mỹ Dung', photoLabel: index => `Ảnh cưới thứ ${index} của Văn Tuấn - Mỹ Dung`
   },
   en: {
     opEyebrow: 'WEDDING INVITATION', opHint: 'Tap the seal to open', opGuestDefault: 'Our dear guest',
@@ -81,8 +81,8 @@ const translations = {
     rsvpThanksYes: name => `Thank you, ${name}! We can't wait to see you 💕`,
     rsvpThanksNo: name => `Thank you for letting us know, ${name}. We'll miss you!`,
     wishThanks: 'Thank you for your wishes! 💕', sendFailed: 'Could not send. Please check your connection and try again.',
-    pageTitle: 'Mỹ Dung - Văn Tuấn | Wedding Invitation',
-    description: 'Wedding invitation for Huỳnh Thị Mỹ Dung and Nguyễn Văn Tuấn.',
+    pageTitle: 'Văn Tuấn - Mỹ Dung | Wedding Invitation',
+    description: 'Wedding invitation for Nguyễn Văn Tuấn and Huỳnh Thị Mỹ Dung.',
     welcome: 'Welcome to our wedding',
     heroQuote: 'I love three things in this world:<br />the sun, the moon and you.<br />The sun for morning, the moon for night,<br />and you forever.',
     married: 'We got married', bride: 'BRIDE', groom: 'GROOM',
@@ -134,8 +134,8 @@ const translations = {
     countdownDone: 'The celebration is here!', day: 'days', hour: 'hours', minute: 'minutes', second: 'seconds',
     weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     calendarDate: date => `October ${date}`, calendarWeddingDate: date => `October ${date}, wedding day`,
-    introPhoto: 'Wedding photo of Mỹ Dung - Văn Tuấn',
-    photoPlaceholder: 'Wedding photo of Mỹ Dung - Văn Tuấn', photoLabel: index => `Wedding photo ${index} of Mỹ Dung - Văn Tuấn`
+    introPhoto: 'Wedding photo of Văn Tuấn - Mỹ Dung',
+    photoPlaceholder: 'Wedding photo of Văn Tuấn - Mỹ Dung', photoLabel: index => `Wedding photo ${index} of Văn Tuấn - Mỹ Dung`
   }
 };
 

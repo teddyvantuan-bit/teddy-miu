@@ -102,3 +102,43 @@ body.modal-open { overflow: hidden; }
 .wish-feed { transition: opacity .4s; }
 .wish-feed.muted { opacity: 0; visibility: hidden; }
 body.modal-open .wish-feed, body.lb-open .wish-feed { display: none; }
+
+/* ---------- Hero names never wrap (small phones) ---------- */
+.hero-bottom > div { min-width: 0; }
+.hero-bottom strong { white-space: nowrap; font-size: min(28px, calc((min(100vw, 640px) - 72px) / 15.8)) !important; }
+
+/* ---------- Lotus countdowns: green for Nhà Gái, red for Nhà Trai ---------- */
+.lotus-row { display: grid !important; grid-template-columns: 1fr !important; gap: 26px !important; justify-items: center; margin-top: 44px !important; }
+.lotus {
+  --p0: #d6ead0; --p1: #bfdcb4; --p2: #a7cd99; --p3: #8ebd7f; --stroke: #4f7d45; --leaf: #5f8f55; --ink: #2f5d2a; --glow: #9ccf8c55;
+  position: relative; width: min(100%, 380px); aspect-ratio: 360 / 330; container-type: inline-size;
+  padding: 0 !important; border: 0 !important;
+}
+.lotus-groom { --p0: #fbdcda; --p1: #f5c0bd; --p2: #eca19d; --p3: #e1817c; --stroke: #a5222c; --leaf: #8e1b24; --ink: #8e1b24; --glow: #f0a3a355; }
+.lotus-art { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 8px 18px var(--glow)); }
+.lotus .petal {
+  stroke: var(--stroke); stroke-width: 1.4; stroke-linejoin: round;
+  transform: rotate(var(--a)); transform-box: fill-box; transform-origin: 50% 100%;
+  transition: transform 1.6s cubic-bezier(.2, .8, .2, 1), opacity 1.2s ease;
+}
+.lotus .p0 { fill: var(--p0); } .lotus .p1 { fill: var(--p1); } .lotus .p2 { fill: var(--p2); } .lotus .p3 { fill: var(--p3); }
+.lotus .p1 { transition-delay: .12s; } .lotus .p2 { transition-delay: .24s; } .lotus .p3 { transition-delay: .36s; }
+.lotus .leaf { fill: var(--leaf); opacity: .85; }
+.reveal-ready .lotus-row:not(.revealed) .petal { transform: rotate(0deg) scale(.55); opacity: .2; }
+@media (prefers-reduced-motion: no-preference) {
+  .lotus-row.revealed .lotus-art { animation: lotus-breathe 5s ease-in-out 2s infinite; transform-origin: 50% 90%; }
+}
+@keyframes lotus-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.025); } }
+.lotus-body {
+  position: absolute; left: 11%; right: 11%; top: 52%; bottom: 9%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2cqw;
+  padding: 2.5cqw 2cqw; border-radius: 22px;
+  background: #fffdf8d9; box-shadow: 0 4px 18px #0000001a, inset 0 0 0 1px #ffffff; backdrop-filter: blur(2px);
+}
+.lotus-label { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; font-size: clamp(13px, 4.6cqw, 18px); letter-spacing: .08em; color: var(--ink); text-transform: uppercase; }
+.lotus .cd { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2cqw; width: 100%; }
+.lotus .cd[hidden], .lotus .cd-done[hidden] { display: none; }
+.cd-unit { display: grid; justify-items: center; gap: 2px; padding: 1.6cqw 0; border-radius: 12px; background: #fff; box-shadow: 0 1px 0 var(--stroke), 0 2px 8px #00000012; }
+.cd-unit b { font-family: PlayfairDisplay, 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(20px, 8cqw, 32px); line-height: 1.05; color: var(--ink); font-variant-numeric: tabular-nums; }
+.cd-unit small { font-size: clamp(10px, 3.2cqw, 12px); letter-spacing: .08em; color: #6f6763; text-transform: uppercase; }
+.cd-done { margin: 0 !important; font-family: 'Katty Diona', 'Great Vibes', cursive; font-size: clamp(24px, 9cqw, 36px) !important; color: var(--ink); }
