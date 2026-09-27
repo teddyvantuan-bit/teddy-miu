@@ -23,3 +23,11 @@ Bản VI giữ các tiêu đề và dòng trang trí tiếng Anh như mẫu tham
 Website: `https://teddyvantuan-bit.github.io/teddy-miu/`.
 
 Thiết kế được viết lại từ đầu theo bố cục tham khảo của CineLove; không sao chép ảnh, mã hay nhạc của trang mẫu.
+
+## Tính năng mới (09/2026)
+
+- **Xác nhận tham dự + lời chúc** lưu vào Google Sheet "Thiệp cưới – Xác nhận tham dự & Lời chúc" (script trong `backend/Code.gs`, link web app trong `config.js`). Bỏ tick "Hiện trên web" để ẩn một lời chúc.
+- **Link mời riêng:** mở `tao-link.html`, dán danh sách tên khách → mỗi khách một link `?to=Tên&side=bride|groom`.
+- **Bản đồ, mừng cưới:** sửa trong `config.js` (`maps`, `gifts`). Nút mừng cưới chỉ hiện khi có số tài khoản hoặc ảnh QR.
+- **Hiệu ứng:** chữ/ảnh hiện dần khi cuộn (1,3s), cánh hoa rơi, ảnh bìa zoom chậm (`extras.js`, `extras.css`).
+- **Ảnh xem trước khi chia sẻ link:** `assets/og.jpg`.

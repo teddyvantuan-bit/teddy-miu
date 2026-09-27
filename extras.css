@@ -1,0 +1,129 @@
+/* ---------- Scroll reveal (same rhythm as the reference: 1.3s ease-out, 50px) ---------- */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transition: opacity 1.3s ease-out var(--reveal-delay, 0s), transform 1.3s ease-out var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.reveal-ready [data-reveal="up"] { transform: translateY(50px); }
+.reveal-ready [data-reveal="left"] { transform: translateX(-50px); }
+.reveal-ready [data-reveal="right"] { transform: translateX(50px); }
+.reveal-ready [data-reveal="zoom"] { transform: scale(.94); }
+.reveal-ready [data-reveal].revealed { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise { opacity: 0; animation: hero-rise 1.3s ease-out var(--reveal-delay, 0s) forwards; }
+  .hero .ph-img { animation: ken-burns 14s ease-out both; transform-origin: 50% 40%; }
+}
+@keyframes hero-rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+@keyframes ken-burns { from { transform: scale(1.12); } to { transform: scale(1); } }
+
+/* ---------- Falling petals ---------- */
+.petals { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 8; pointer-events: none; }
+body.lb-open .petals, body.modal-open .petals { display: none; }
+
+/* ---------- Personal invitation card ---------- */
+.guest-card { text-align: center; padding: 38px 24px 42px; margin: 0 26px; border-bottom: 1px solid #e6dcd6; }
+.guest-card[hidden] { display: none; }
+.guest-card p { margin: 0; font-family: Quicksand, 'Be Vietnam Pro', sans-serif; font-size: 15px; letter-spacing: .04em; color: #5c5552; }
+.guest-card h2 { margin: 10px 0 12px; font-family: 'Katty Diona', 'Great Vibes', cursive; font-size: 52px; font-weight: 400; color: #c91212; line-height: 1.15; }
+
+/* ---------- Maps ---------- */
+.map-box { margin: 22px auto 0; border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 3; background: #eee7e1; box-shadow: 0 2px 12px #0000000f; }
+.map-box iframe { width: 100%; height: 100%; border: 0; display: block; }
+.map-button {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; padding: 10px 22px;
+  border-radius: 30px; background: #c91212; color: #fff; text-decoration: none;
+  font-family: Quicksand, 'Be Vietnam Pro', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .03em;
+  box-shadow: 0 4px 14px #c9121233; transition: transform .2s, box-shadow .2s;
+}
+.map-button:hover { transform: translateY(-1px); box-shadow: 0 6px 18px #c9121240; }
+.groom-card .map-button { background: #2f5d3a; box-shadow: 0 4px 14px #2f5d3a33; }
+
+/* ---------- RSVP ---------- */
+.rsvp { padding: 70px 26px 120px !important; text-align: center; background: linear-gradient(#fffefa, #f7efea); }
+.rsvp .eyebrow { font-size: 16px; letter-spacing: .4em; color: #9a8f88; margin-bottom: 6px; }
+.rsvp h2 { font-family: 'Katty Diona', 'Great Vibes', cursive; font-size: 54px; font-weight: 400; color: #c91212; margin: 0 0 8px; }
+.rsvp-intro, .rsvp-closed { max-width: 400px; margin: 0 auto 28px !important; font-size: 15px; line-height: 1.7; color: #5c5552; }
+.rsvp-closed[hidden] { display: none; }
+#rsvp-form { max-width: 440px; margin: 0 auto; text-align: left; display: grid; gap: 16px; padding: 26px 22px; background: #fff; border-radius: 18px; box-shadow: 0 6px 30px #8a4b4b14; }
+#rsvp-form[hidden] { display: none; }
+.field { display: grid; gap: 7px; font-size: 14px; font-weight: 600; color: #3f3a38; }
+.field input, .field select, .field textarea, .choice label, #wish-form input, #wish-form textarea {
+  font: 400 15px/1.4 Quicksand, 'Be Vietnam Pro', sans-serif; color: #2d2927;
+}
+.field input, .field select, .field textarea, #wish-form input, #wish-form textarea {
+  width: 100%; padding: 12px 14px; border: 1px solid #e3d8d2; border-radius: 12px; background: #fffdfb; outline: none; transition: border-color .2s, box-shadow .2s;
+}
+.field textarea, #wish-form textarea { resize: vertical; min-height: 84px; }
+.field input:focus, .field select:focus, .field textarea:focus, #wish-form input:focus, #wish-form textarea:focus { border-color: #c91212; box-shadow: 0 0 0 3px #c912121a; }
+.choice { border: 0; padding: 0; margin: 0; display: grid; gap: 8px; }
+.choice legend { font-size: 14px; font-weight: 600; color: #3f3a38; margin-bottom: 8px; padding: 0; }
+.choice label { display: flex; align-items: center; gap: 10px; padding: 11px 14px; border: 1px solid #e3d8d2; border-radius: 12px; cursor: pointer; transition: border-color .2s, background .2s; }
+.choice label:has(input:checked) { border-color: #c91212; background: #fdf3f2; }
+.choice input { accent-color: #c91212; width: 17px; height: 17px; margin: 0; flex: none; }
+.attend-only { display: grid; gap: 16px; }
+.attend-only[hidden] { display: none; }
+.trap { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; }
+#rsvp-form button[type="submit"], #wish-form button[type="submit"] {
+  margin-top: 4px; padding: 14px; border: 0; border-radius: 30px; background: #c91212; color: #fff; cursor: pointer;
+  font: 600 16px Quicksand, 'Be Vietnam Pro', sans-serif; letter-spacing: .04em; box-shadow: 0 6px 18px #c912122e;
+}
+#rsvp-form button:disabled, #wish-form button:disabled { opacity: .6; cursor: wait; }
+.form-status { margin: 0; min-height: 1.4em; text-align: center; font-size: 14px; line-height: 1.6; color: #2f5d3a; }
+.form-status.error { color: #c91212; }
+
+/* ---------- Floating toolbar ---------- */
+.floating-actions { gap: 6px !important; }
+.floating-actions .wish-button { padding: 0 16px; font-size: 13px; white-space: nowrap; font-family: Quicksand, 'Be Vietnam Pro', sans-serif; font-weight: 600; }
+.floating-actions .gift-button { font-size: 20px; }
+.floating-actions .gift-button span { display: inline-block; animation: gift-bounce 2.4s ease-in-out infinite; }
+.floating-actions button[hidden] { display: none !important; }
+@keyframes gift-bounce { 0%, 70%, 100% { transform: none; } 78% { transform: translateY(-4px) rotate(-8deg); } 86% { transform: translateY(0) rotate(6deg); } }
+
+/* ---------- Wish feed ---------- */
+.wish-feed {
+  position: fixed; z-index: 9; left: max(12px, calc(50vw - 320px + 12px)); bottom: 72px;
+  width: min(300px, calc(100vw - 80px)); pointer-events: none;
+}
+.wish-feed[hidden] { display: none; }
+.wish-feed-list { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.wish-bubble {
+  margin: 0; padding: 7px 11px; border-radius: 12px; background: #d9a3a6e6; color: #fff; font-size: 12.5px; line-height: 1.45;
+  max-width: 100%; box-shadow: 0 2px 8px #0000001a; opacity: 0; transform: translateY(12px); transition: opacity .45s, transform .45s;
+  overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.wish-bubble.in { opacity: 1; transform: none; }
+.wish-bubble.out { opacity: 0; transform: translateY(-10px); }
+.wish-feed-close {
+  pointer-events: auto; position: absolute; top: -26px; left: 0; width: 22px; height: 22px; border: 0; border-radius: 50%;
+  background: #0000004d; color: #fff; font-size: 11px; cursor: pointer;
+}
+
+/* ---------- Modals ---------- */
+.modal { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px; background: #1b1716a6; backdrop-filter: blur(3px); }
+.modal[hidden] { display: none; }
+body.modal-open { overflow: hidden; }
+.modal-card { position: relative; width: min(100%, 420px); max-height: 90vh; overflow: auto; padding: 30px 22px 22px; border-radius: 20px; background: #fffdfb; text-align: center; display: grid; gap: 12px; animation: modal-in .35s ease-out; }
+.modal-card h2 { margin: 0 0 4px; font-family: 'Katty Diona', 'Great Vibes', cursive; font-weight: 400; font-size: 44px; color: #c91212; }
+.modal-close { position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: #f1e8e4; color: #5c5552; cursor: pointer; font-size: 14px; }
+@keyframes modal-in { from { opacity: 0; transform: translateY(20px) scale(.98); } to { opacity: 1; transform: none; } }
+.gift-note { margin: 0 0 6px; font-size: 14px; color: #5c5552; }
+.gift-list { display: grid; gap: 14px; }
+.gift-item { display: grid; justify-items: center; gap: 6px; padding: 16px; border: 1px solid #eee1db; border-radius: 16px; }
+.gift-side { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #9a8f88; }
+.gift-item img { width: min(220px, 70vw); aspect-ratio: 1; object-fit: contain; border-radius: 10px; background: #fff; }
+.gift-item strong { font-size: 15px; letter-spacing: .03em; }
+.gift-item small { color: #6f6763; }
+.gift-account { display: flex; align-items: center; gap: 8px; }
+.gift-account code { font: 600 16px Quicksand, monospace; letter-spacing: .05em; }
+.gift-account button { border: 0; border-radius: 20px; padding: 6px 12px; background: #c91212; color: #fff; cursor: pointer; font-size: 12px; }
+
+/* Override the older RSVP rules in styles.css */
+#rsvp-form input:not([type=radio]), #rsvp-form select, #rsvp-form textarea { display: block; margin: 0; }
+#rsvp-form fieldset { margin: 0; }
+#rsvp-form .choice label { display: flex; margin: 0; font-size: 15px; }
+#rsvp-form .field { margin: 0; font-size: 14px; }
+.rsvp > p { font-size: 15px; }
+.wish-feed { transition: opacity .4s; }
+.wish-feed.muted { opacity: 0; visibility: hidden; }
+body.modal-open .wish-feed, body.lb-open .wish-feed { display: none; }

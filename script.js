@@ -43,15 +43,9 @@ window.updateCountdowns = updateCountdowns;
 updateCountdowns();
 setInterval(updateCountdowns, 1000);
 
-document.getElementById('rsvp-form').addEventListener('submit', event => {
-  event.preventDefault();
-  const status = document.getElementById('form-status');
-  status.dataset.messageKey = 'rsvpUnavailable';
-  status.textContent = weddingI18n.t('rsvpUnavailable');
-});
-
 const toast = document.getElementById('action-toast');
 let toastTimer;
+window.showToast = showToast;
 function showToast(message) {
   toast.textContent = message;
   toast.classList.add('visible');
