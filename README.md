@@ -10,7 +10,7 @@ Bản VI giữ các tiêu đề và dòng trang trí tiếng Anh như mẫu tham
 
 - Nhà gái: 18/10/2026, Lễ Vu Quy 09:00 tại tư gia nhà gái, tiệc 10:00 tại Nhà Văn Hóa Thôn Tân Quý, Xã Chiên Đàn, TP. Đà Nẵng.
 - Nhà trai: 25/10/2026, tiệc 10:00 tại gia đình nhà trai, TDP Tống Văn, P. Trần Lãm, T. Hưng Yên.
-- Cha mẹ nhà gái: Huỳnh Đức Dũng và Phạm Thị Vinh.
+- Cha mẹ nhà gái: Huỳnh Đức Dũng và Phạm Thị Vĩnh.
 - Cha mẹ nhà trai: Nguyễn Văn Thanh và Mai Thị Loan.
 
 ## Cần hoàn thiện
